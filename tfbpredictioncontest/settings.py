@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -77,11 +77,14 @@ WSGI_APPLICATION = 'tfbpredictioncontest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tfbpredictioncontest_db',
+        'USER': 'tfbpcadmin',
+        'PASSWORD': 'tfbpredictioncontestpass',
+        'HOST': '',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
